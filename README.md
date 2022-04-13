@@ -1,5 +1,5 @@
 # Books CRUD - Express + TypeScript
-In this project I created a Books API using Express + TypeScript + JSON, a CRUD (Creat, Read, Update, Delete) was implemented.
+In this project I created a Books API using Express + TypeScript + JSON, a CRUD (Create, Read, Update, Delete) was implemented.
 
 ## To run:
 1. Clone the repository
