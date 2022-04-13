@@ -7,4 +7,11 @@ async function read(): Promise<Book[]> {
   return books;
 };
 
-export default read;
+async function write(data: Book[]): Promise<void> {
+  await fs.writeFile('src/database/books.json', JSON.stringify(data));
+};
+
+export {
+  read,
+  write
+};

@@ -2,8 +2,10 @@ import express from "express";
 import BookRoutes from './routes/books';
 import 'dotenv/config';
 
-const app = express();
 const PORT = process.env.PORT || 3000;
+const app: express.Application = express();
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Express + TypeScript');
