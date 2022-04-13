@@ -54,11 +54,10 @@ router.delete('/books/:isbn', async (req: Request, res: Response) => {
   const index = books.findIndex((book) => book.isbn === isbn);
 
   if(index === -1) return res.status(StatusCode.NOT_FOUND).send(notFoundMessage);
-
-  books.slice(index, 1);
+  books.splice(index, 1);
   await write(books);
 
-  return res.status(StatusCode.NO_CONTENT).end();
+  return res.status(StatusCode.NO_CONTENT).send();
 });
 
 export default router;
