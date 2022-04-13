@@ -6,7 +6,7 @@ const properties = ['type', 'name', 'price', 'image', 'author', 'publishingCompa
 
 function validProperties(book: Book): [boolean, string | null] {
   for (let i = 0; i < properties.length; i+= 1) {
-    if(!Object.prototype.hasOwnProperty.call(book, properties[i])) {
+    if(!book.hasOwnProperty(properties[i])) {
       return [false, properties[i]];
     }
   }
